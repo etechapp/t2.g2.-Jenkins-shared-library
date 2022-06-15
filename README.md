@@ -11,15 +11,20 @@ On Jenkins, configure a Global Pipeline Library. Jenkins dashboard > Manage Jenk
 Grow the shared library by cloning the repo and adding (.groovy) scripts which contain Jenkinsfiles that would be shared by multiple applications. 
 
 **Sample groovy script in Jenkins shared library**
+
 def call(String repoUrl){
+  
   echo "git clone $repoUrl"     # This line can be replaced with any Jenkinsfile. E.g. pipeline {}
+ 
  }
 
 **Step 4:** Referencing and Using the Shared Library
 For an application to reference a particular Jenkinsfile in the shared library, the Jenkinsfile in the application repository would be created as follows:
 
 **Sample Jenkinsfile in the Application Repo**
+
 @Library ('t2.g2.-shared-library') _
+
 chidanyApp 'https://github.com/etechapp/T2.G2.-AppOne'
 
 **'t2.g2.-shared-library':** represents the name of the library that was configured on Jenkins in Step 2 above.
