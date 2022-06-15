@@ -24,6 +24,6 @@ For an application to reference a particular Jenkinsfile in the shared library, 
 @Library ('t2.g2.-shared-library') _  
 chidanyApp 'https://github.com/etechapp/T2.G2.-AppOne'
 
-**'t2.g2.-shared-library':** represents the name of the library that was configured on Jenkins in Step 2 above.
-**chidanyApp:** represents the name of the groovy script in the shared library repo which is being referenced for the application build.
+**'t2.g2.-shared-library':** represents the name of the library that was configured on Jenkins in Step 2 above.  
+**chidanyApp:** represents the name of the groovy script in the shared library repo which is being referenced for the application build.  
 **GitHub Repo URL:** represents the repo URL of the application which is being built
