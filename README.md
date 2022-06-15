@@ -12,10 +12,8 @@ Grow the shared library by cloning the repo and adding (.groovy) scripts which c
 
 **Sample groovy script in Jenkins shared library**
 
-def call(String repoUrl){
-  
-  echo "git clone $repoUrl"     # This line can be replaced with any Jenkinsfile. E.g. pipeline {}
- 
+def call(String repoUrl){  
+  echo "git clone $repoUrl"     # This line can be replaced with any Jenkinsfile. E.g. pipeline {}  
  }
 
 **Step 4:** Referencing and Using the Shared Library
@@ -23,11 +21,9 @@ For an application to reference a particular Jenkinsfile in the shared library, 
 
 **Sample Jenkinsfile in the Application Repo**
 
-@Library ('t2.g2.-shared-library') _
-
+@Library ('t2.g2.-shared-library') _  
 chidanyApp 'https://github.com/etechapp/T2.G2.-AppOne'
 
 **'t2.g2.-shared-library':** represents the name of the library that was configured on Jenkins in Step 2 above.
 **chidanyApp:** represents the name of the groovy script in the shared library repo which is being referenced for the application build.
 **GitHub Repo URL:** represents the repo URL of the application which is being built
-
